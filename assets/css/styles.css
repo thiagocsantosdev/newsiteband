@@ -1,0 +1,549 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 54px;
+    position: fixed;
+    background-color: rgb(0, 0, 0, 0.8);
+    z-index: 2;
+}
+
+header img{
+    width: 80px;
+}
+
+.welcome{
+    width: 100%;
+    height: 500px;
+    background-size: 400px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url(../assets/images/upscale.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 20px;
+    padding-top: 100px;
+    animation: FadeOut linear;
+    animation-timeline: scroll();
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+
+
+.text-welcome{
+    animation: FadeIn 2s;
+}
+
+
+
+.text-welcome p:nth-child(1){
+
+    font-size: 2rem;
+    font-family: Anton;
+    font-weight: bold;
+    color: white;
+    animation:EsquerdaPraDireita;
+    animation-timeline: scroll();
+    width: 100px;
+ 
+    
+}
+
+.text-welcome p:nth-child(2){
+    font-size: 5rem;
+    font-family: Anton;
+    font-weight: bold;
+    color: white;
+    animation: ParaDireita;
+    animation-timeline: view();
+    animation: DireitaPraEsquerda;
+    animation-timeline: scroll();
+    width: 100px;
+    
+
+}
+
+
+
+.text-welcome{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.text-welcome ul {
+    display: flex;
+    color: lightgray;
+    list-style: none;
+    font-family: Poppins;
+    gap: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+.text-welcome ul li{
+    border: 1px solid gray;
+    padding: 6px;
+    border-radius: 6px;
+    font-size: .8rem;
+}
+
+
+.text-welcome ul li:nth-child(1){
+    animation: RefreshSugirDireitaEsquerda 1s ease-in-out;
+}
+
+.text-welcome ul li:nth-child(2){
+    animation: RefreshSugirDireitaEsquerda 1s ease-in-out;
+   animation-duration: 1.5s;
+}
+
+
+.text-welcome ul li:nth-child(3){
+    animation: RefreshSugirDireitaEsquerda 1s ease-in-out;
+    animation-duration: 2s;
+}
+.first-iframe{
+    animation: SugirBaixoCima 2s ease-in-out;
+}
+
+
+.first-iframe iframe{
+    animation:  SumirPraBaixo;
+    animation-timeline: scroll();
+}
+
+
+ .social{
+    overflow: hidden;  /* Hide overflow to make the scroll effect smoother */
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    white-space: nowrap;
+    
+    
+}
+
+.social h2{
+    color: gray;
+    font-family: Poppins;
+    font-size: .8rem;
+    font-weight: 300;
+    padding: 6px;
+}
+ .social ul{
+    display: flex;
+    gap:10px;
+    list-style: none;
+ }
+
+ .social ul li{
+    color: gray;
+    font-family: Poppins;
+ }
+
+ .social ul::after {
+    content: attr(data-items); /* Replicates original content */
+    display: flex;
+}
+
+
+
+.agenda{
+    display: flex;
+    flex-direction: column;
+    font-family:Poppins;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    width: 100%;
+    height:400px;
+    
+   
+}
+
+.agenda h2:nth-child(1){
+    animation: PraDireita linear;
+    animation-timeline: scroll();
+}
+.agenda h2:nth-child(2){
+    animation: PraEsquerda linear;
+    animation-timeline: scroll();
+}
+
+.agenda-shows-item{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.agenda-shows-item button{
+    
+    background-color: yellow;
+    padding: 6px;
+    border: none;
+    border-radius: 6px;
+    margin-top: 4px;
+}
+
+.agenda-shows-item-local p:nth-child(2){
+    color: lightslategrey;
+}
+
+
+
+
+.midia{
+    width: 100%;
+    background-color: black;
+}
+
+.midia h2{
+    color: white;
+    padding: 20px;
+    font-family: Poppins;
+    animation: SugirBaixoCima ease-in-out;
+    animation-timeline: view();
+    
+}
+
+.midia ul li img{
+    width: 400px;
+    height: 300px;
+    padding: 20px;
+}
+
+.midia ul{
+    display: flex;
+    display: inline-block; 
+ 
+}
+
+.midia ul li{
+    display: inline; 
+}
+
+
+.rolamento{
+    overflow: hidden; 
+    white-space: nowrap; 
+    width: 100%; 
+}
+
+.shop{
+    background-color: black;
+    padding: 20px;
+    
+}
+
+.container-shop-item{
+    display: flex;
+    gap: 20px;
+}
+
+.shop h2{
+    color: white;
+    font-family: Poppins;
+    animation: SugirBaixoCima ease-in-out;
+    animation-timeline: view();
+    padding-bottom: 20px;
+    
+}
+
+
+
+.shop-item img{
+    width: 150px;
+    height: 200px;
+    border-radius: 8px;
+}
+
+.shop-item-descriptions{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 6px;
+}
+
+.shop-item-descriptions p:nth-child(1){
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.shop-item-descriptions p:nth-child(2){
+    font-family: Poppins;
+    color: gray;
+    font-size: .8rem;
+}
+
+.shop-item button{
+    padding: 4px;
+    border: none;
+    border-radius: 6px;
+    background-color: yellow;
+    margin-left: 6px;
+}
+
+
+.music{
+    background: black;
+    padding: 20px;
+}
+
+.music h2{
+        
+        color: white;
+        font-family: Poppins;
+        animation: Sugir ;
+        animation-timeline: view();
+        padding-bottom: 20px;
+        animation: SugirBaixoCima ease-in-out;
+        animation-timeline: view();
+}
+
+.music-spotify{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.music-spotify iframe{
+    width: 100vw;
+}
+
+
+.second-video{
+    padding: 20px;
+    width: 100vw;
+    background-color: black;
+   
+}
+
+.second-video iframe{
+  
+    width: 50%;
+}
+
+.second-video h2{
+    color:white;
+    font-family: Poppins;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+
+
+    @keyframes EsquerdaPraDireita{
+        0%{
+            transform: translateX(0%);
+            opacity: 1;
+          
+        }
+        5%{
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(100%);
+            opacity: 0;
+          
+        }
+    }
+
+
+    @keyframes DireitaPraEsquerda{
+        0%{
+            transform: translateX(0%);
+            opacity: 1;
+        }
+        10%{
+            opacity: 0;
+           
+        }
+
+        30%{
+            transform: translateX(-100%);
+            opacity: 0;
+        } 
+       
+      
+    }
+
+
+
+    @keyframes RefreshSugirDireitaEsquerda{
+         0%{
+            opacity: 0;
+            transform: translateX(100%);
+         }
+         100%{
+            opacity: 1;
+            transform: translateX(0%);
+         }
+    }
+
+
+
+    @keyframes PraDireita{
+        0%{
+            transform: translateX(-5%);
+        }
+        100%{
+            transform: translateX(10%);
+            
+        }
+    }
+
+    @keyframes PraEsquerda{
+        0%{
+            transform: translateX(5%);
+        }
+        100%{
+            transform: translateX(-10%);
+           
+        }
+    }
+
+
+ 
+
+  
+
+
+
+
+
+
+
+
+@keyframes FadeIn{
+    0% {
+        opacity: 0;
+    }100%{
+        opacity: 1;
+    }
+}
+
+
+@keyframes SugirBaixoCima{
+    0%{
+        opacity: 0;
+        transform: translatey(10%);
+    }
+    100%{
+        opacity: 1;
+        transform: translatey(0%);
+    }
+       
+}
+
+
+@keyframes SumirPraBaixo {
+
+
+    0%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    to{
+        transform: scale(1.1);
+        opacity: 0;
+    }
+    
+}
+
+
+
+
+@media (min-width: 993px ){
+    
+    .agenda{
+        align-items: center;
+    }
+    .agenda-shows{
+        display: flex;
+        gap: 40px;
+    }
+
+    .welcome{
+        flex-direction: row;
+    }
+    
+
+   
+       
+    
+
+    .agenda-shows-item{
+        border: 1px solid gray;
+        padding: 20px;
+        border-radius: 12px;
+        display: flex;
+        gap: 20px;
+    }
+
+    .welcome{
+        height: 700px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 200px;
+}
+
+        .text-welcome p:nth-child(1){
+            font-size: 4rem;
+        }
+        .text-welcome p:nth-child(2){
+            font-size: 6rem;
+        }
+
+    .welcome iframe{
+        max-width: 1024px;
+        min-width: 960px;
+        min-height: 400px;
+        max-height: 640px;
+        border-radius: 15px;
+    }
+
+    .text-welcome ul {
+        display: flex;
+        color: gray;
+        list-style: none;
+        font-family: Poppins;
+        gap: 20px;
+    
+    }
+    
+    
+ 
+
+}
+footer{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: gray;
+    font-family: Poppins;
+    padding: 20px;
+}
+
+footer p {
+    text-align: center;
+    font-size: .8rem;
+}
