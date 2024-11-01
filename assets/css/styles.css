@@ -26,7 +26,7 @@ header img{
     background-size: 400px;
     background-repeat: no-repeat;
     background-position: top;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url('../images/upscale.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url('../images/logo.png');
     background-size: cover;
     background-attachment: fixed;
     padding: 20px;
