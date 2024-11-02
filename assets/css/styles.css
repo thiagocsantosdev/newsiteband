@@ -5,6 +5,12 @@
 
 }
 
+body{
+    background-color: black;
+
+}
+
+
 header{
     display: flex;
     align-items: center;
@@ -64,8 +70,7 @@ header img{
     font-family: Anton;
     font-weight: bold;
     color: white;
-    animation: ParaDireita;
-    animation-timeline: view();
+
     animation: DireitaPraEsquerda;
     animation-timeline: scroll();
     width: 100px;
@@ -123,6 +128,7 @@ header img{
 .first-iframe iframe{
     animation:  SumirPraBaixo;
     animation-timeline: scroll();
+    
 }
 
 
@@ -133,7 +139,6 @@ header img{
     color: white;
     padding: 20px;
     white-space: nowrap;
-    
     
 }
 
@@ -146,13 +151,15 @@ header img{
 }
  .social ul{
     display: flex;
-    gap:10px;
+    gap:20px;
     list-style: none;
+   
+    
  }
 
- .social ul li{
+ .social ul li a{
     color: gray;
-    font-family: Poppins;
+  
  }
 
  .social ul::after {
@@ -188,6 +195,8 @@ header img{
     margin-top: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    animation: SugirBaixoCima;
+    animation-timeline: view();
 }
 
 .agenda-shows-item button{
@@ -197,6 +206,12 @@ header img{
     border: none;
     border-radius: 6px;
     margin-top: 4px;
+    cursor: pointer;
+    opacity: .8;
+}
+
+.agenda-shows-item button:hover{
+    opacity: 1;
 }
 
 .agenda-shows-item-local p:nth-child(2){
@@ -220,15 +235,29 @@ header img{
     
 }
 
+
+
 .midia ul li img{
     width: 400px;
     height: 300px;
     padding: 20px;
+    transition: 1s;
+    
+}
+
+.midia ul li img:hover{
+    transform: scale(1.1);
+    transition: 1s;
+    cursor: pointer;
 }
 
 .midia ul{
     display: flex;
-    display: inline-block; 
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; 
+    animation: SugirBaixoCima;
+    animation-timeline: view();
  
 }
 
@@ -246,12 +275,19 @@ header img{
 .shop{
     background-color: black;
     padding: 20px;
+    animation: SugirBaixoCima;
+    animation-timeline: view();
     
 }
 
 .container-shop-item{
     display: flex;
     gap: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    cursor: pointer;
+
 }
 
 .shop h2{
@@ -294,6 +330,12 @@ header img{
     border-radius: 6px;
     background-color: yellow;
     margin-left: 6px;
+    cursor: pointer;
+    opacity: .8;
+}
+
+.shop-item button:hover{
+    opacity: 1;
 }
 
 
@@ -327,14 +369,12 @@ header img{
 
 .second-video{
     padding: 20px;
-    width: 100vw;
-    background-color: black;
+    width: 100%;
    
 }
 
-.second-video iframe{
-  
-    width: 50%;
+.second-video iframe{ 
+    width: 100%;
 }
 
 .second-video h2{
@@ -342,6 +382,21 @@ header img{
     font-family: Poppins;
     padding-top: 20px;
     padding-bottom: 20px;
+}
+
+.second-video-content{
+   display: flex;
+   flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+   
+}
+
+.second-video-content p {
+    color:lightslategray;
+    font-family: Montserrat;
+
 }
 
 
@@ -483,16 +538,13 @@ header img{
     }
     
 
-   
-       
-    
-
     .agenda-shows-item{
         border: 1px solid gray;
         padding: 20px;
         border-radius: 12px;
         display: flex;
         gap: 20px;
+        
     }
 
     .welcome{
@@ -516,6 +568,7 @@ header img{
         min-height: 400px;
         max-height: 640px;
         border-radius: 15px;
+        
     }
 
     .text-welcome ul {
@@ -541,9 +594,12 @@ footer{
     color: gray;
     font-family: Poppins;
     padding: 20px;
+    margin-top: 50px;
+
 }
 
 footer p {
     text-align: center;
     font-size: .8rem;
 }
+
