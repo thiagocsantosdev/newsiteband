@@ -28,6 +28,7 @@ header{
     position: fixed;
     background-color: rgb(0, 0, 0, 0.8);
     z-index: 2;
+    animation: FadeIn 1s forwards ;
 }
 
 header img{
@@ -50,6 +51,7 @@ header img{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    animation: FadeIn 3s forwards;
 }
 
 
@@ -121,13 +123,13 @@ header img{
 
 .text-welcome ul li:nth-child(2){
     animation: RefreshSugirDireitaEsquerda 1s ease-in-out;
-   animation-duration: 1.5s;
+   animation-duration: 2s;
 }
 
 
 .text-welcome ul li:nth-child(3){
     animation: RefreshSugirDireitaEsquerda 1s ease-in-out;
-    animation-duration: 2s;
+    animation-duration: 3s;
 }
 .first-iframe{
     animation: SugirBaixoCima 2s ease-in-out;
@@ -161,12 +163,17 @@ header img{
     font-size: .8rem;
     font-weight: 300;
     padding: 6px;
+    animation: SugirBaixoCima 2s forwards;
+    
 }
 
  .social ul{
     display: flex;
     gap:20px;
     list-style: none;
+    animation: SugirBaixoCima 3s forwards;
+
+   
  }
 
  .social ul li a{
@@ -207,7 +214,7 @@ header img{
     color: white;
     width: 100%;
     height:400px;
-    
+    animation: SugirBaixoCima 2s forwards;
    
 }
 
@@ -322,7 +329,7 @@ header img{
     font-family: var(--font-primary);
     animation: SugirBaixoCima ease-in-out;
     animation-timeline: view();
-   padding-top: 20px;
+    padding: 20px 0px 0px 20px;
 
     
 }
@@ -548,6 +555,9 @@ header img{
 }
 
 
+
+
+
  /*============================= Seção de Responsividade ================================= */
 
 
@@ -619,6 +629,10 @@ header img{
     .container-shop-item{
         display: flex;
         flex-wrap: wrap;
+    }
+
+    .music-spotify iframe{
+        width: 50vw;
     }
  
 
