@@ -1,3 +1,4 @@
+/* Reseta comportamento padrão dos navegadores */
 *{
     margin: 0px;
     padding: 0px;
@@ -5,11 +6,18 @@
 
 }
 
+:root {
+    --background-color: black;
+    --highlight-color: yellow;
+    --font-primary: 'Poppins', sans-serif;
+}
+
 body{
     background-color: black;
 
 }
 
+/*============================= Seção de Cabeçalho================================= */
 
 header{
     display: flex;
@@ -26,6 +34,8 @@ header img{
     width: 80px;
 }
 
+/*============================= Seção de Hero ================================= */
+  
 .welcome{
     width: 100%;
     height: 500px;
@@ -37,8 +47,6 @@ header img{
     background-attachment: fixed;
     padding: 20px;
     padding-top: 100px;
-    animation: FadeOut linear;
-    animation-timeline: scroll();
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -58,8 +66,8 @@ header img{
     font-family: Anton;
     font-weight: bold;
     color: white;
-    animation:EsquerdaPraDireita;
-    animation-timeline: scroll();
+    animation:EsquerdaPraDireita; /* Anima a entrada do texto quando a página é carregada */
+    animation-timeline: scroll(); /* Anima a entrada do texto quando a página é carregada */
     width: 100px;
  
     
@@ -70,9 +78,8 @@ header img{
     font-family: Anton;
     font-weight: bold;
     color: white;
-
-    animation: DireitaPraEsquerda;
-    animation-timeline: scroll();
+    animation: DireitaPraEsquerda; /* Anima a entrada do texto quando a página é carregada */
+    animation-timeline: scroll(); /* Anima a entrada do texto quando a página é carregada */
     width: 100px;
     
 
@@ -91,7 +98,7 @@ header img{
     display: flex;
     color: lightgray;
     list-style: none;
-    font-family: Poppins;
+    font-family: var(--font-primary);
     gap: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -105,6 +112,8 @@ header img{
     font-size: .8rem;
 }
 
+
+/* Anima o texto e o video principal da seção hero quando o rolamento é feito*/
 
 .text-welcome ul li:nth-child(1){
     animation: RefreshSugirDireitaEsquerda 1s ease-in-out;
@@ -132,47 +141,67 @@ header img{
 }
 
 
+
+/*============================= Seção de Redes Sociais ================================= */
+
+/* Estiliza a seção */
+
  .social{
-    overflow: hidden;  /* Hide overflow to make the scroll effect smoother */
+
     width: 100%;
-    background-color: black;
+    background-color: var(--background-color);
     color: white;
     padding: 20px;
-    white-space: nowrap;
-    
+    white-space: nowrap;  
 }
 
 .social h2{
     color: gray;
-    font-family: Poppins;
+    font-family: var(--font-primary);
     font-size: .8rem;
     font-weight: 300;
     padding: 6px;
 }
+
  .social ul{
     display: flex;
     gap:20px;
     list-style: none;
-   
-    
  }
 
  .social ul li a{
     color: gray;
-  
+    transition: 1s;
  }
 
- .social ul::after {
-    content: attr(data-items); /* Replicates original content */
-    display: flex;
+   /* Troca cor dos botão de redes socials quando mouse passa por cima */
+
+ .social ul li:nth-child(1) a:hover{ /* Spotify */
+        color: green;
+        transition: 1s;
+ }
+
+.social ul li:nth-child(2) a:hover{ /* Youtube */
+     color: red;
+     transition: 1s;
 }
 
+.social ul li:nth-child(3) a:hover{ /* Instagram */
+    color: purple;
+    transition: 1s;
+}
 
+.social ul li:nth-child(4) a:hover{ /* LinkTrhee */
+    color: white;
+    transition: 1s;
+}
+ 
+/*============================= Seção de Agenda ================================= */
 
 .agenda{
     display: flex;
     flex-direction: column;
-    font-family:Poppins;
+    font-family: var(--font-primary);
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.9);
     color: white;
@@ -201,7 +230,7 @@ header img{
 
 .agenda-shows-item button{
     
-    background-color: yellow;
+    background-color: var(--highlight-color);
     padding: 6px;
     border: none;
     border-radius: 6px;
@@ -219,17 +248,17 @@ header img{
 }
 
 
-
+/*============================= Seção de Mídia ================================= */
 
 .midia{
     width: 100%;
-    background-color: black;
+    background-color: var(--background-color);
 }
 
 .midia h2{
     color: white;
     padding: 20px;
-    font-family: Poppins;
+    font-family: var(--font-primary);
     animation: SugirBaixoCima ease-in-out;
     animation-timeline: view();
     
@@ -265,38 +294,41 @@ header img{
     display: inline; 
 }
 
-
-.rolamento{
-    overflow: hidden; 
-    white-space: nowrap; 
-    width: 100%; 
-}
+/*============================= Seção de Shop ================================= */
 
 .shop{
-    background-color: black;
+    background-color: var(--background-color);
     padding: 20px;
     animation: SugirBaixoCima;
     animation-timeline: view();
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .container-shop-item{
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    background-color: rgba(0, 0, 0, 0.9); 
+    grid-template-columns: 1fr 1fr;
+    grid-row: 1fr 1fr 1fr;
     cursor: pointer;
+   
 
 }
 
-.shop h2{
+.title-container{
     color: white;
-    font-family: Poppins;
+    font-family: var(--font-primary);
     animation: SugirBaixoCima ease-in-out;
     animation-timeline: view();
-    padding-bottom: 20px;
+   padding-top: 20px;
+
     
+}
+
+.shop-item{
+    padding: 20px;
 }
 
 
@@ -315,11 +347,11 @@ header img{
 }
 
 .shop-item-descriptions p:nth-child(1){
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Anton;
 }
 
 .shop-item-descriptions p:nth-child(2){
-    font-family: Poppins;
+    font-family: var(--font-primary);
     color: gray;
     font-size: .8rem;
 }
@@ -328,7 +360,7 @@ header img{
     padding: 4px;
     border: none;
     border-radius: 6px;
-    background-color: yellow;
+    background-color: var(--highlight-color);
     margin-left: 6px;
     cursor: pointer;
     opacity: .8;
@@ -338,16 +370,17 @@ header img{
     opacity: 1;
 }
 
+/*============================= Seção de Music ================================= */
 
 .music{
-    background: black;
+    background-color: var(--background-color);
     padding: 20px;
 }
 
 .music h2{
         
         color: white;
-        font-family: Poppins;
+        font-family: var(--font-primary);
         animation: Sugir ;
         animation-timeline: view();
         padding-bottom: 20px;
@@ -367,6 +400,8 @@ header img{
 }
 
 
+/*============================= Seção Mais (o segundo video) ================================= */
+
 .second-video{
     padding: 20px;
     width: 100%;
@@ -379,7 +414,7 @@ header img{
 
 .second-video h2{
     color:white;
-    font-family: Poppins;
+    font-family: var(--font-primary);
     padding-top: 20px;
     padding-bottom: 20px;
 }
@@ -398,6 +433,8 @@ header img{
     font-family: Montserrat;
 
 }
+
+/*============================= Seção de Animações KEYFRAMES ================================= */
 
 
 
@@ -473,16 +510,6 @@ header img{
     }
 
 
- 
-
-  
-
-
-
-
-
-
-
 
 @keyframes FadeIn{
     0% {
@@ -521,7 +548,11 @@ header img{
 }
 
 
+ /*============================= Seção de Responsividade ================================= */
 
+
+
+  /* Desktop */
 
 @media (min-width: 993px ){
     
@@ -577,13 +608,25 @@ header img{
         list-style: none;
         font-family: Poppins;
         gap: 20px;
-    
+
+    }
+
+    .second-video-content p {
+        width: 600px;
     }
     
-    
+
+    .container-shop-item{
+        display: flex;
+        flex-wrap: wrap;
+    }
  
 
 }
+
+
+/*============================= Seção de Rodapé ================================= */
+
 footer{
     background-color: black;
     display: flex;
